@@ -18,17 +18,8 @@ vim.opt.rtp:prepend(lazy_path)
 
 require('lazy').setup({
   {
-    -- Neovim setup for init.lua and plugin development
-    'folke/neodev.nvim',
-    config = function()
-      require('neodev').setup()
-    end
-  },
-
-  {
     -- Detect tabstop and shiftwidth automatically
     'tpope/vim-sleuth',
-    opts = {},
   },
 
   {
