@@ -1,10 +1,9 @@
 <div align=center>
 
-# °˖✧ ze.nvim ✧˖°
+# °˖✧ zenvim ✧˖°
 
 **minimal neovim config**
 
 </div>
 
-This is a minimal set of configuration that allows me to use Neovim as "editor + terminal" instead of a full IDE.
-
+This is a minimal set of configuration for Neovim that allows me to use it as "editor + terminal".
