@@ -99,7 +99,7 @@ require('lazy').setup({
       { ']b', '<cmd>BufferLineCycleNext<cr>', desc = 'Next buffer' },
     },
     config = function()
-      require('bufferline').setup()
+      require('bufferline').setup{}
     end,
   },
   
@@ -141,8 +141,10 @@ require('lazy').setup({
     config = function()
       require('toggleterm').setup({
         open_mapping = '<C-t>',
-        direction = 'horizontal',
-        size = 15,
+        direction = 'float',
+        float_opts = {
+          border = 'single',
+        }
       })
     end,
   },
