@@ -98,8 +98,9 @@ require('lazy').setup({
       { '[b', '<cmd>BufferLineCyclePrev<cr>', desc = 'Prev buffer' },
       { ']b', '<cmd>BufferLineCycleNext<cr>', desc = 'Next buffer' },
     },
+    lazy = false,
     config = function()
-      require('bufferline').setup{}
+      require('bufferline').setup()
     end,
   },
   
