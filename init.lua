@@ -4,6 +4,7 @@ vim.g.maplocalleader = ' '
 
 -- Make line numbers default
 vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -45,14 +46,15 @@ vim.opt.rtp:prepend(lazy_path)
 
 require('lazy').setup({
   {
-    -- Catppuccin theme
-    'catppuccin/nvim',
-    name = 'catppuccin',
+    -- Rose-Pine theme
+    'rose-pine/neovim',
+    name = 'rose-pine',
     config = function()
-      require('catppuccin').setup({
-        flavour = 'macchiato',
+      require('rose-pine').setup({
+        variant = 'main',
+        dark_variant = 'main',
       })
-      vim.cmd.colorscheme('catppuccin')
+      vim.cmd.colorscheme('rose-pine')
     end
   },
 
@@ -110,7 +112,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'catppuccin',
+        theme = 'rose-pine',
         component_separators = '|',
         section_separators = '',
       },
