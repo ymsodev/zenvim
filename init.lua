@@ -28,7 +28,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Open file explorer
-vim.keymap.set('n', '<leader>fe', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>f', vim.cmd.Ex)
 
 -- Install Lazy package manager
 local lazy_path = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -83,29 +83,6 @@ require('lazy').setup({
     },
   },
 
-  {
-    -- Add support for file icons 
-    'nvim-tree/nvim-web-devicons',
-  },
-
-  {
-    -- Add a buffer line (tabs)
-    'akinsho/bufferline.nvim',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-    },
-    keys = {
-      { '<leader>br', '<Cmd>BufferLineCloseRight<CR>', desc = 'Delete buffers to the right' },
-      { '<leader>bl', '<Cmd>BufferLineCloseLeft<CR>', desc = 'Delete buffers to the left' },
-      { '[b', '<cmd>BufferLineCyclePrev<cr>', desc = 'Prev buffer' },
-      { ']b', '<cmd>BufferLineCycleNext<cr>', desc = 'Next buffer' },
-    },
-    lazy = false,
-    config = function()
-      require('bufferline').setup()
-    end,
-  },
-  
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
