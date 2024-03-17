@@ -46,17 +46,29 @@ vim.opt.rtp:prepend(lazy_path)
 
 require('lazy').setup({
   {
-    -- Rose-Pine theme
-    'rose-pine/neovim',
-    name = 'rose-pine',
+    -- Catppuccin theme
+    'catppuccin/nvim',
+    name = 'catppuccin',
     config = function()
-      require('rose-pine').setup({
-        variant = 'main',
-        dark_variant = 'main',
+      require('catppuccin').setup({
+        flavour = 'mocha',
       })
-      vim.cmd.colorscheme('rose-pine')
+      vim.cmd.colorscheme('catppuccin')
     end
   },
+
+  -- {
+  --   -- Rose-Pine theme
+  --   'rose-pine/neovim',
+  --   name = 'rose-pine',
+  --   config = function()
+  --     require('rose-pine').setup({
+  --       variant = 'main',
+  --       dark_variant = 'main',
+  --     })
+  --     vim.cmd.colorscheme('rose-pine')
+  --   end
+  -- },
 
   {
     -- Telescope for file search
@@ -101,7 +113,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'rose-pine',
+        theme = 'catppuccin',
         component_separators = '|',
         section_separators = '',
       },
