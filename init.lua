@@ -57,19 +57,6 @@ require('lazy').setup({
     end
   },
 
-  -- {
-  --   -- Rose-Pine theme
-  --   'rose-pine/neovim',
-  --   name = 'rose-pine',
-  --   config = function()
-  --     require('rose-pine').setup({
-  --       variant = 'main',
-  --       dark_variant = 'main',
-  --     })
-  --     vim.cmd.colorscheme('rose-pine')
-  --   end
-  -- },
-
   {
     -- Telescope for file search
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -147,7 +134,10 @@ require('lazy').setup({
         direction = 'float',
         float_opts = {
           border = 'single',
-        }
+        },
+        -- Locally change the path to shell when necessary.
+        -- It assumes Windows 11 with w64devkit by default.
+        shell = 'C:\\w64devkit\\w64devkit.exe',
       })
     end
   }
